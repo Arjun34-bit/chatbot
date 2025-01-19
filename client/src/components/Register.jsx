@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+import { URL } from "../constants/constants";
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -16,7 +17,7 @@ function Register() {
     e.preventDefault();
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/register", {
+      await axios.post(`${URL}/register`, {
         username,
         email,
         password,

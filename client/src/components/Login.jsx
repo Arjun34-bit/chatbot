@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+import { URL } from "../constants/constants";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post(`${URL}/login`, {
         email,
         password,
       });

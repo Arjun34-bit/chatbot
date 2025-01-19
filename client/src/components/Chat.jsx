@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Spinner from "../Spinner/Spinner";
+import { URL } from "../constants/constants";
 
 function Chat() {
   const [message, setMessage] = useState("");
@@ -17,7 +18,7 @@ function Chat() {
     const fetchHistory = async () => {
       try {
         setFetchingLoading(true);
-        const response = await axios.get("http://localhost:5000/history", {
+        const response = await axios.get(`${URL}/history`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFetchingLoading(false);
