@@ -18,10 +18,11 @@ const JWT_SECRET = "julie";
 
 // Database connection
 const db = mysql.createConnection({
-  host: "bq3q3xl2n3acbrkfn3ih-mysql.services.clever-cloud.com",
-  user: "ujybsr1ifek7fyqc",
-  password: "ujybsr1ifek7fyqc",
-  database: "bq3q3xl2n3acbrkfn3ih",
+  host: process.env.MYSQL_ADDON_HOST,
+  user: process.env.MYSQL_ADDON_USER,
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  database: process.env.MYSQL_ADDON_DB,
+  port: process.env.MYSQL_ADDON_PORT,
 });
 
 db.connect((err) => {
