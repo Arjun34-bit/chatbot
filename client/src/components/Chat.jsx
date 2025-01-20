@@ -59,7 +59,7 @@ function Chat() {
     <div className="chat-container">
       <h2>Welcome, {localStorage.getItem("username")}</h2>
       <h4>start with hello</h4>
-      <p>Disable ad blocker to get immediate response</p>
+      <p>Disable ad blocker to get response</p>
 
       <div className="chat-box">
         {chat.map((c, index) => (
