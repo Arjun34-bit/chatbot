@@ -39,7 +39,7 @@ function Chat() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/chat",
+        `${URL}/chat`,
         { message },
         { headers: { Authorization: `Bearer ${token}` } }
       );
