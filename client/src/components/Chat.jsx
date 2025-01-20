@@ -58,6 +58,7 @@ function Chat() {
   return (
     <div className="chat-container">
       <h2>Welcome, {localStorage.getItem("username")}</h2>
+      <h4>start with hello</h4>
 
       <div className="chat-box">
         {chat.map((c, index) => (

@@ -52,6 +52,10 @@ const authenticateJWT = (req, res, next) => {
   });
 };
 
+app.get("/", (req, res) => {
+  console.log("API Running Successfully");
+});
+
 // User Registration
 app.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
