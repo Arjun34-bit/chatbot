@@ -5,8 +5,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 
-// import OpenAI from "openai";
-
 const OpenAI = require("openai");
 
 const cors = require("cors");
@@ -16,15 +14,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Secret key for JWT
 const JWT_SECRET = "julie";
 
 // Database connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root", // Replace with your MySQL username
-  password: "Arjun@10", // Replace with your MySQL password
-  database: "chatbot", // Replace with your database name
+  host: "bq3q3xl2n3acbrkfn3ih-mysql.services.clever-cloud.com",
+  user: "ujybsr1ifek7fyqc",
+  password: "ujybsr1ifek7fyqc",
+  database: "bq3q3xl2n3acbrkfn3ih",
 });
 
 db.connect((err) => {
