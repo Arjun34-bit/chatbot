@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 const JWT_SECRET = "julie";
 
 // Database connection
-const db = mysql.createConnection({
+const db = mysql.createPool({
   host: process.env.MYSQL_ADDON_HOST,
   user: process.env.MYSQL_ADDON_USER,
   password: process.env.MYSQL_ADDON_PASSWORD,
@@ -25,13 +25,13 @@ const db = mysql.createConnection({
   port: process.env.MYSQL_ADDON_PORT,
 });
 
-db.connect((err) => {
-  if (err) {
-    console.error("Error connecting to MySQL:", err);
-    process.exit(1);
-  }
-  console.log("Connected to MySQL database.");
-});
+// db.connect((err) => {
+//   if (err) {
+//     console.error("Error connecting to MySQL:", err);
+//     process.exit(1);
+//   }
+//   console.log("Connected to MySQL database.");
+// });
 
 // Hash passwords
 const hashPassword = async (password) => {
