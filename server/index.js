@@ -11,7 +11,7 @@ const cors = require("cors");
 
 dotenv.config();
 const app = express();
-app.use();
+app.use(cors());
 app.use(bodyParser.json());
 
 const JWT_SECRET = "julie";
