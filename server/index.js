@@ -51,7 +51,7 @@ const authenticateJWT = (req, res, next) => {
 };
 
 app.get("/", (req, res) => {
-  console.log("API Running Successfully");
+  res.send("API is running successfully");
 });
 
 // User Registration
